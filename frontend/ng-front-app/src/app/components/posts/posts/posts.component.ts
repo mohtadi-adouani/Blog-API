@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Post} from '../post';
-import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
+import { Post} from '../../../interfaces/post';
+import {NgForOf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {POSTS} from '../post-mock';
+import {POSTS} from '../../../data/post-mock';
 import {PostDetailComponent} from '../post-detail/post-detail.component';
 
 @Component({

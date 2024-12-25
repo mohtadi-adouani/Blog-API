@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgIf, UpperCasePipe} from "@angular/common";
-import {Post} from '../post';
+import {Post} from '../../../interfaces/post';
 
 @Component({
   selector: 'app-post-detail',
