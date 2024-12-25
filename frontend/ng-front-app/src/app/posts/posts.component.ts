@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
 import { Post} from '../post';
-import {UpperCasePipe} from '@angular/common';
+import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
 import {FormsModule} from '@angular/forms';
+import {POSTS} from '../post-mock';
 
 @Component({
   selector: 'app-posts',
   imports: [
     UpperCasePipe,
-    FormsModule
+    FormsModule,
+    NgForOf,
+    NgIf
   ],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })
 export class PostsComponent {
-  post: Post = {
-    id: 1,
-    title: "Exemple de titre",
-    body: "Exemple de body",
-  };
+  posts = POSTS;
+  selectedPost?: Post;
+
+
+  onSelect(post: Post): void {
+    this.selectedPost = post;
+  }
 
 }
