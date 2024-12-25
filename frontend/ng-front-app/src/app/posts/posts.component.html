@@ -1,12 +1,4 @@
-<div *ngIf="selectedPost">
-  <h2>{{selectedPost.title | uppercase}}</h2>
-  <div>id: {{selectedPost.id}}</div>
-  <div>id: {{selectedPost.body}}</div>
-  <div>
-    <label for="post-title">Post title: </label>
-    <input id="post-title" [(ngModel)]="selectedPost.title" placeholder="title">
-  </div>
-</div>
+
 <h2>Posts</h2>
 <ul class="posts">
   <li *ngFor="let post of posts">
@@ -15,3 +7,5 @@
     </button>
   </li>
 </ul>
+
+<app-post-detail [post]="selectedPost"></app-post-detail>

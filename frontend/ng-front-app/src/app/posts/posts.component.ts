@@ -3,14 +3,14 @@ import { Post} from '../post';
 import {NgForOf, NgIf, UpperCasePipe} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {POSTS} from '../post-mock';
+import {PostDetailComponent} from '../post-detail/post-detail.component';
 
 @Component({
   selector: 'app-posts',
   imports: [
-    UpperCasePipe,
     FormsModule,
     NgForOf,
-    NgIf
+    PostDetailComponent,
   ],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
