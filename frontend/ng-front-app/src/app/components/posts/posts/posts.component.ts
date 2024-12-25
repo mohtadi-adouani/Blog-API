@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {POSTS} from '../../../data/post-mock';
 import {PostDetailComponent} from '../post-detail/post-detail.component';
 import {PostService} from '../../../services/post/post.service';
+import {MessageService} from '../../../services/message/message.service';
 
 @Component({
   selector: 'app-posts',
@@ -20,9 +21,10 @@ export class PostsComponent implements OnInit{
   posts: Post[] = [];
   selectedPost?: Post;
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private messageService: MessageService) { }
   onSelect(post: Post): void {
     this.selectedPost = post;
+    this.messageService.add(`PostComponent: Selected pos id=${post.id}`);
   }
 
   getPosts(): void {
