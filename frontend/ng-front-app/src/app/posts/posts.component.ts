@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './posts.component.css'
 })
 export class PostsComponent {
+  title = 'Windstorm';
 
 }
