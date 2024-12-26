@@ -16,4 +16,10 @@ export class PostService {
     this.messageService.add('PostService: fetched posts');
     return posts;
   }
+  getPost(id: number): Observable<Post> {
+      // For now, assume that a post with the specified `id` always exists.
+      const post = POSTS.find(h => h.id === id)!;
+      this.messageService.add(`PostService: fetched post id=${id}`);
+      return of(post);
+  }
 }
