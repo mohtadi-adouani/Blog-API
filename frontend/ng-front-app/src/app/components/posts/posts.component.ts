@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { Post} from '../../../interfaces/post';
+import { Post} from '../../interfaces/post';
 import {NgForOf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {PostService} from '../../../services/post/post.service';
-import {MessageService} from '../../../services/message/message.service';
+import {PostService} from '../../services/post/post.service';
 import {RouterLink} from '@angular/router';
 
 @Component({

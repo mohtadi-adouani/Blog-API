@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgIf, UpperCasePipe, Location} from "@angular/common";
-import {Post} from '../../../interfaces/post';
+import {Post} from '../../interfaces/post';
 import {ActivatedRoute} from '@angular/router';
-import {PostService} from '../../../services/post/post.service';
+import {PostService} from '../../services/post/post.service';
 
 @Component({
   selector: 'app-post-detail',

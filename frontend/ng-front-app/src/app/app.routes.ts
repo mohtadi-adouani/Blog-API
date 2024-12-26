@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent} from './components/dashboard/dashboard.component';
-import { PostsComponent} from './components/posts/posts/posts.component';
-import { PostDetailComponent} from './components/posts/post-detail/post-detail.component';
+import { PostsComponent} from './components/posts/posts.component';
+import { PostDetailComponent} from './components/post-detail/post-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
