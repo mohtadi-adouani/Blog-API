@@ -7,7 +7,7 @@ import { PostDetailComponent} from './components/post-detail/post-detail.compone
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: PostDetailComponent },
+  { path: 'detail/:post_slug', component: PostDetailComponent },
   { path: 'posts', component: PostsComponent }
 ];
 export {routes}

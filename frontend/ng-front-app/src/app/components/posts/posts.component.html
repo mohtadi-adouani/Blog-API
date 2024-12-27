@@ -1,7 +1,7 @@
 <h2>Posts</h2>
 <ul class="posts">
   <li *ngFor="let post of posts">
-    <a routerLink="/detail/{{post.id}}">
+    <a routerLink="/detail/{{post.slug}}">
       <span class="badge">{{post.id}}</span> {{post.title}}
     </a>
   </li>

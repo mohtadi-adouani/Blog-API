@@ -7,4 +7,5 @@ comments?: number;
 description?: string;
 image?: string;
 url?: string;
+slug?: string;
 }
