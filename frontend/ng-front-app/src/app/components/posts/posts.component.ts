@@ -4,6 +4,7 @@ import {NgForOf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {PostService} from '../../services/post/post.service';
 import {RouterLink} from '@angular/router';
+import {PostListResponse} from '../../interfaces/PostListResponse';
 
 @Component({
   selector: 'app-posts',
@@ -20,7 +21,8 @@ export class PostsComponent implements OnInit{
   constructor(private postService: PostService) { }
 
   getPosts(): void {
-    this.postService.getPosts().subscribe((posts: Post[]) => this.posts = posts);
+    this.postService.getPosts()
+      .subscribe((posts_response: PostListResponse) => this.posts = posts_response.results);
   }
 
     ngOnInit(): void {

@@ -1,17 +1,21 @@
-import {Injectable} from '@angular/core';
+import {Injectable, signal} from '@angular/core';
+import {map, Observable, of, tap} from 'rxjs';
+import {HttpClient} from "@angular/common/http";
 import {Post} from '../../interfaces/post';
 import {POSTS} from '../../data/post-mock';
-import {Observable, of} from 'rxjs';
-
+import {environement} from "../../environement";
+import {PostListResponse} from '../../interfaces/PostListResponse';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
+
+
 export class PostService {
+    private BASE_URL = environement.apiURL;
 
-
-  constructor() { }
-  getPosts(): Observable<Post[]> {
-    return of(POSTS);
+  constructor(private http: HttpClient) { }
+  getPosts(): Observable<PostListResponse> {
+        return this.http.get<PostListResponse>(this.BASE_URL + '/posts/')
   }
   getPost(id: number): Observable<Post>{
       // For now, assume that a post with the specified `id` always exists.

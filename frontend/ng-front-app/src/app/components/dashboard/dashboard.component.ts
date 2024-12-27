@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post} from '../../interfaces/post';
+import { PostListResponse} from '../../interfaces/PostListResponse';
 import { PostService} from '../../services/post/post.service';
 import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
@@ -24,6 +25,9 @@ export class DashboardComponent implements OnInit {
 
   getPosts(): void {
     this.postService.getPosts()
-      .subscribe(posts => this.posts = posts.slice(1, 5));
+      .subscribe((posts_response: PostListResponse) => {
+          this.posts = posts_response.results.length > 5 ? posts_response.results.slice(1,5): posts_response.results
+        }
+      );
   }
 }
