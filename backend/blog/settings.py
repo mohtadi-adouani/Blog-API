@@ -25,7 +25,7 @@ SECRET_KEY = "@lu+7yr(h6^9)l+l$n^f@(n=+$685-ijv^-mt+i61*k&h-llf0"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
