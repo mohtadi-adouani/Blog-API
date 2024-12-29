@@ -34,3 +34,4 @@ urllib3==1.25.11
 django
 djangorestframework
 drf_yasg
+django-cors-headers
